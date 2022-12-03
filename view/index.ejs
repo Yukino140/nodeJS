@@ -1,0 +1,26 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <%- include('header') %>
+
+        <% for (let i = 0; i <User.length; i++) {%>
+
+            <li>
+
+                Username:
+                <%= User[i].username %>
+            </li>
+            <li> password:
+                <%= User[i].password %>
+
+            </li>
+            <%}%>
+                <%- include('footer') %>
+
+</body>
+
+</html>

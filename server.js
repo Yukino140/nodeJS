@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const fs = require('fs');
+require("dotenv").config();
 const student = require('./routes/Student')
+app.set('views', './view');
+
+app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.use(express.json())
 app.use('/student', student)
